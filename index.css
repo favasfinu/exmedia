@@ -1,0 +1,273 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: rgb(25, 24, 24);
+    cursor: cell;
+  }
+
+  /* cursor */
+  .cursor-dot {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9999;
+    pointer-events: none;
+    display: none;}
+
+  .cursor-outline {
+    width: 30px;
+    height: 30px;
+    border: 2px solid hsla(0, 0%, 100%, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1;
+    pointer-events: none;
+    transition: left 0.2s, top 0.2s; /* Decreased transition duration for faster movement */
+  }
+  
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .video-container video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .image {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  
+  .image img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1);
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image:hover .overlay {
+    opacity: 1;
+  }
+  
+  .caption {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .image:hover .caption {
+    opacity: 1;
+  }
+  
+
+  .gallery {
+    position: relative; 
+  }
+
+  .image {
+    position: relative; 
+    z-index: 1;
+  }
+
+  .icon{
+    height: 100px;
+    text-align: center;
+
+} 
+.center-text{
+    height: 50px;
+    font-weight: 200;
+    font-size: 5rem;
+}
+.center-text2{
+height: 50px;
+font-weight: 200;
+font-size: 5rem;
+}
+
+.center-text3{
+height: 50px;
+font-weight: 200;
+font-size: 6rem;
+}
+
+.extrasize img {
+    width: 500px;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  /* down arrows */
+
+  .arrows {
+    width: 60px;
+    height: 72px;
+    position: absolute;
+    left: 50%;
+    margin-left: -30px;
+    bottom: 20px;
+  }
+  
+  .arrows path {
+    stroke: #2994D1;
+    fill: transparent;
+    stroke-width: 1px;  
+    animation: arrow 2s infinite;
+    -webkit-animation: arrow 2s infinite; 
+  }
+  
+  @keyframes arrow
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  @-webkit-keyframes arrow /*Safari and Chrome*/
+  {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+  }
+  
+  .arrows path.a1 {
+    animation-delay:-1s;
+    -webkit-animation-delay:-1s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a2 {
+    animation-delay:-0.5s;
+    -webkit-animation-delay:-0.5s; /* Safari 和 Chrome */
+  }
+  
+  .arrows path.a3 { 
+    animation-delay:0s;
+    -webkit-animation-delay:0s; /* Safari 和 Chrome */
+  }
+
+  /* text1 animation */
+
+  .container {
+    text-align: center;
+  }
+  
+  .animated-text {
+    font-family: 'Arial', sans-serif;
+    font-size: 80px;
+    font-size: 8.2em;
+    color: #fffefe;
+  }
+  
+  .service {
+    color: #ff4500; /* Change color to your brand color */
+    transition: color 0.5s ease-in-out;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+
+
+  /* nexttext */
+
+
+
+
+  .header-text {
+    font-size: 2.2em;
+    font-weight: bold;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 50px;
+    color: paleturquoise;
+    font-family: "Times New Roman", Times, serif;
+  }
+
+  .animation-text {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .animation-text span {
+    display: inline-block;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .animation-text:hover span {
+    transform: translateY(-100%);
+  }
+  .d11{
+    color: #ff4500;
+  }
+  
+
+  /* three image css */
+
+  
+ 

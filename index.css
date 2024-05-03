@@ -270,4 +270,24 @@ font-size: 6rem;
   /* three image css */
 
   
- 
+ /* whatsapp css */
+
+
+.oak-button {
+  position: fixed;
+  bottom: 20px; 
+  right: 20px; 
+  z-index: 1000; 
+}
+
+
+.oak-button img {
+  width: 50px; 
+  height: auto; 
+  border-radius: 50%; 
+  
+}
+body{
+  background-color: rgb(25, 24, 24);
+  cursor: url('image/whatsapp.png'), auto;
+}
